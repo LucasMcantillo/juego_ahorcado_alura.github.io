@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Gorditas:700|Knewave&display=swap');
+
+
+::placeholder {
+  color: #000;
+}
+
+* {
+  font-family: "Dejavu Sans";
+  text-align: center;
+}
+.vector{
+  position: absolute;
+  width: 31px;
+  height: 48px;
+  left: 44px;
+  top: 40px;
+}
+body {
+  background: url("../img/fondo6.png") no-repeat;
+}
+
+footer button {
+  padding: 20px;
+}
+
+footer div {
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 1%;
+  animation: footer 1s;
+}
+
+
+
+#altavoz {
+  margin-top: 1%;
+  position: relative;
+  /*left: %;*/
+  width: 4%;
+}
+
+#imagen {
+  margin-top: 31%;
+  margin-left: 22%;
+  width: 128%;
+}
+
+#pista {
+  -webkit-text-stroke: 1px #000;
+  color: #ffffff;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 3em;
+
+  text-transform: uppercase;
+  animation: pista 1s;
+}
+
+
+
+#resultado {
+  font-family: 'Bitter', serif;
+  font-size: 2em;
+}
+
+.imagenDiv {
+  float: left;
+  margin-left: 6%;
+  width: 13%;
+}
+
+.intentosH2 span {
+  color: #FFF;
+  font-family: "arial", cursive;
+  text-shadow: -2px -2px 1px rgb(0, 0, 0), 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+}
+
+.intentosH2 {
+  color: #FFF;
+  font-family: "arial", cursive;
+  font-size: 3em;
+  margin: 0 auto;
+  text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+  width: fit-content;
+}
+
+.juegoDiv * {
+  text-align: center;
+}
+
+.juegoDiv input {
+  display: block;
+  margin: 6% auto;
+}
+
+.juegoDiv {  
+  float: left;
+  height: auto;
+  margin-left: 14%;
+  margin-top: 2%;
+  margin-bottom: 2.5%;
+  position: relative;
+  width: 58%;
+}
+
+.pistaIntentosDiv h1 {
+  float: left;
+  margin-left: 20%;
+}
+
+.pistaIntentosDiv h2 {
+  float: left;
+  margin-top: 3%;
+  width: 31%;
+}
+
+.pistaIntentosDiv {
+  overflow: hidden;
+  padding-left: 12%;
+}
+
+.principal {
+  margin-top: 3%;
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+}

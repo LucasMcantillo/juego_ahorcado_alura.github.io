@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es-Es" dir="ltr">
+  <head>
+    <title>Juego del ahorcado</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/emergentes.css" rel="stylesheet" type="text/css">
+    <link href="css/botones.css" rel="stylesheet" type="text/css">
+    <link href="css/animaciones.css" rel="stylesheet" type="text/css">
+    <link href="css/responsive.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+  </head>
+  <body>
+    <header>
+      <img src="img/logo.png" class="vector"  alt="log">
+  </header>
+    <div class="principal">
+      <img src="img/altavozOff.png" alt="altavoz" id="altavoz" onclick="controlMusicaFondo()">
+      <div class="imagenDiv">
+        <img src="img/svg/horca.svg" alt="muñeco" id="imagen" >
+      </div>
+      <div class="juegoDiv">
+        <h1 id="pista"></h1>
+        <h2 class="intentosH2">
+         <span id="intentos"></span> / <span id="intentosOriginales"></span>
+        </h2>
+        <!--<h2 id="puntuacionH2"></h2>-->
+        <h2 id="resultado"><pre></pre></h2>
+        <div class="tecladoDiv">
+          <button type="button" class="tecla" id="teclaq" value="Q" onclick="comprobarTecla('q');">Q</button>
+          <button type="button" class="tecla" id="teclaw" value="W" onclick="comprobarTecla('w');">W</button>
+          <button type="button" class="tecla" id="teclae" value="E" onclick="comprobarTecla('e');">E</button>
+          <button type="button" class="tecla" id="teclar" value="R" onclick="comprobarTecla('r');">R</button>
+          <button type="button" class="tecla" id="teclat" value="T" onclick="comprobarTecla('t');">T</button>
+          <button type="button" class="tecla" id="teclay" value="Y" onclick="comprobarTecla('y');">Y</button>
+          <button type="button" class="tecla" id="teclau" value="U" onclick="comprobarTecla('u');">U</button>
+          <button type="button" class="tecla" id="teclai" value="I" onclick="comprobarTecla('i');">I</button>
+          <button type="button" class="tecla" id="teclao" value="O" onclick="comprobarTecla('o');">O</button>
+          <button type="button" class="tecla" id="teclap" value="P" onclick="comprobarTecla('p');">P</button><br>
+          <button type="button" class="tecla" id="teclaa" value="A" onclick="comprobarTecla('a');">A</button>
+          <button type="button" class="tecla" id="teclas" value="S" onclick="comprobarTecla('s');">S</button>
+          <button type="button" class="tecla" id="teclad" value="D" onclick="comprobarTecla('d');">D</button>
+          <button type="button" class="tecla" id="teclaf" value="F" onclick="comprobarTecla('f');">F</button>
+          <button type="button" class="tecla" id="teclag" value="G" onclick="comprobarTecla('g');">G</button>
+          <button type="button" class="tecla" id="teclah" value="H" onclick="comprobarTecla('h');">H</button>
+          <button type="button" class="tecla" id="teclaj" value="J" onclick="comprobarTecla('j');">J</button>
+          <button type="button" class="tecla" id="teclak" value="K" onclick="comprobarTecla('k');">K</button>
+          <button type="button" class="tecla" id="teclal" value="L" onclick="comprobarTecla('l');">L</button>
+          <button type="button" class="tecla" id="teclañ" value="Ñ" onclick="comprobarTecla('ñ');">Ñ</button><br>
+          <button type="button" class="tecla" id="teclaz" value="Z" onclick="comprobarTecla('z');">Z</button>
+          <button type="button" class="tecla" id="teclax" value="X" onclick="comprobarTecla('x');">X</button>
+          <button type="button" class="tecla" id="teclac" value="C" onclick="comprobarTecla('c');">C</button>
+          <button type="button" class="tecla" id="teclav" value="V" onclick="comprobarTecla('v');">V</button>
+          <button type="button" class="tecla" id="teclab" value="B" onclick="comprobarTecla('b');">B</button>
+          <button type="button" class="tecla" id="teclan" value="N" onclick="comprobarTecla('n');">N</button>
+          <button type="button" class="tecla" id="teclam" value="M" onclick="comprobarTecla('m');">M</button>
+        </div>
+      </div>
+    </div>
+    <div id="solapaDiv"></div>
+    <!--<div id="agradecimientosDiv">
+      <h1>AGRADECIMIENTOS</h1>
+      <p>Audio perteneciente a la biblioteca de YouTube.</p>
+      <p>
+        Algunas imagénes han sido tomadas de PixaBay bajo la licencia creative commons.        
+      </p>
+      <hr>
+      <p>
+        Desarrollado por Lucas Morales Cantillo y Stefani Gutiérrez Thomas
+      </p>
+      <button class="botonEmergente" onclick="cerrarAgradecimientos();">Cerrar</button>
+    </div>-->
+    <div id="instruccionesDiv">
+      <h1>INSTRUCCIONES</h1>
+      <p>El juego consiste en adivinar la palabra oculta.</p>
+      <p>Podras presionar cuantas teclas creas correctas, sin embargo, solo tendrás 6 intentos fallidos.</p>
+      <p>
+        En todo momento puedes darle al botón "Reiniciar" para empezar una nueva partida, al igual que cuando
+        ganes tienes que pulsar el botón "Siguiente".
+      </p>
+      <p>
+        Si decides reiniciar el sistema generará una nueva palabra para adivinar.
+      </p>
+        
+      </p>
+      <button class="botonEmergente" onclick="cerrarInstrucciones();">Cerrar</button>
+    </div>
+    <footer>
+      <div>
+        <button class="boton" onclick="abrirInstrucciones();">Instrucciones</button>
+      </div>
+      <div>
+        <button class="boton" id="BotonReiniciar" onclick="reiniciarPartida();">Reiniciar</button>
+      </div>
+      <div>
+        <!--<button class="boton" onclick="abrirAgradecimientos();">Agradecimientos</button>
+      </div>-->
+    </footer>
+    <script type="text/javascript" src="js/palabras.js"></script>
+    <script type="text/javascript" src="js/emergentes.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
